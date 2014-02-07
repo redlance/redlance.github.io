@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Jetstrap Docs - Welcome</title>
+    <title>Jetstrap Docs{% if page.title }%} - {{page.title}}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -59,10 +59,7 @@
           </ul>
         </div>
         <div class="span9">
-<div class="page-header">
-  <h1>JTESTING</h1>
-</div>
-Welcome!
+{{content}}
         </div>
       </div>
     </div>
@@ -76,7 +73,7 @@ Welcome!
     </script>
 
     <script>
-      $('#menu [data-section=""]').addClass('active');
+      $('#menu [data-section="{{page.section}}"]').addClass('active');
     </script>
 
     <script type="text/javascript">
